@@ -14,13 +14,13 @@ class RiotAPI(object):
 				args[key] = value
 		response = requests.get(
 			Consts.URL['base'].format(
-				proxy=self.region,
+				#proxy=self.region,
 				region=self.region,
 				url=api_url
 				),
 			params=args
 			)
-		print response.url
+		print(response.url)
 		return response.json()
 
 	def get_summoner_by_name(self, name):
